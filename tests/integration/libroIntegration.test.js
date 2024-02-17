@@ -17,6 +17,7 @@ describe("Libro API", () => {
     const mockLibros = [
       { id: "1", title: "Libro 1" },
       { id: "2", title: "Libro 2" },
+      { id: "3", title: "Libro 3" },
     ];
     libroModel.find.mockResolvedValue(mockLibros);
     const response = await request(app).get("/api/libros");
