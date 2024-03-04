@@ -1,5 +1,11 @@
 // usuarioModel.js
 const mongoose = require("mongoose");
+require('dotenv').config();
+
+mongoose.connect(process.env.MONGO_DB, {
+  useUnifiedTopology: true,
+  useNewUrlParser: true,
+})
 
 // Define the user schema
 const usuarioSchema = new mongoose.Schema({
